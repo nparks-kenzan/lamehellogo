@@ -1,0 +1,8 @@
+steps:
+  - name: "gcr.io/cloud-builders/go"
+    args: ["install", "github.com/nparks-kenzan/lamehellogo"]
+    env: ["PROJECT_ROOT=github.com/nparks-kenzan/lamehellogo"]
+  - name: "gcr.io/cloud-builders/docker"
+    args: ["build", "-t", "gcr.io/spinnaker-gke-demo-phase2/lamehellogo:$REVISION_ID", "-f", "Dockerfile", "."]
+images:
+  - "gcr.io/spinnaker-gke-demo-phase2/lamehellogo:$REVISION_ID"
