@@ -1,2 +1,2 @@
 # lamehellogo
-Lame GoLang Hello World for testing CD purposes
+Lame GoLang Hello World for testing build triggers and different CD/CI solutions
