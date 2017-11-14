@@ -3,6 +3,7 @@ steps:
     args: ["install", "github.com/nparks-kenzan/lamehellogo"]
     env: ["PROJECT_ROOT=github.com/nparks-kenzan/lamehellogo"]
   - name: "gcr.io/cloud-builders/docker"
-    args: ["build", "-t", "gcr.io/$PROJECT_ID/lamehellogo:$REVISION_ID", "-f", "Dockerfile", "."]
+    args: ["build", "-t", "gcr.io/$PROJECT_ID/lamehellogo:$REVISION_ID", "-t", "gcr.io/$PROJECT_ID/lamehellogo:latest", "-f", "Dockerfile", "."]
 images:
   - "gcr.io/$PROJECT_ID/lamehellogo:$REVISION_ID"
+  - "gcr.io/$PROJECT_ID/lamehellogo:latest"
